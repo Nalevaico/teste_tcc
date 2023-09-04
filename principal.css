@@ -19,7 +19,7 @@
       margin-top: 2rem;
   }
   
-   .menu-container {
+   .content-box .menu-container {
             width: 200px;
             margin: 20px auto;
         }
@@ -30,7 +30,7 @@
             padding: 10px;
             margin-bottom: 10px;
         }
-        
+
   .content-box {
     background-color: #f5f5f5;
     padding: 20px;
