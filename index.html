@@ -19,7 +19,19 @@
     <a class="button_card" href="#">BENEFÍCIOS</a>
     <a class="button_card" href="#">SOBRE NÓS</a>
     <a class="button_card" href="#">CONTATO</a>
-  </div>
+   
+    <label for="select1">Escolha uma categoria:</label>
+    <select id="select1">
+      <option value="frutas">Frutas</option>
+      <option value="vegetais">Vegetais</option>
+    </select>
+  
+    <label for="select2">Escolha um item:</label>
+    <select id="select2">
+      <!-- Opções serão preenchidas dinamicamente com JavaScript -->
+    </select>  
+
+</div>
 
   <footer class="footer">
     <div class="container">
@@ -30,5 +42,33 @@
       <img src="logo_distribuidora.png">
       </div>
   </footer>
+
+  <script>
+    const select1 = document.getElementById('select1');
+    const select2 = document.getElementById('select2');
+  
+    const options = {
+      frutas: ['Maçã', 'Banana', 'Morango'],
+      vegetais: ['Cenoura', 'Brócolis', 'Alface'],
+    };
+  
+    select1.addEventListener('change', () => {
+      const selectedCategory = select1.value;
+      const items = options[selectedCategory];
+  
+      select2.innerHTML = '';
+  
+      items.forEach(item => {
+        const option = document.createElement('option');
+        option.value = item;
+        option.textContent = item;
+        select2.appendChild(option);
+      });
+    });
+  
+    select1.dispatchEvent(new Event('change'));
+  </script>
+ 
+    
 </body>
 </html>
