@@ -19,6 +19,18 @@
       margin-top: 2rem;
   }
   
+   .menu-container {
+            width: 200px;
+            margin: 20px auto;
+        }
+
+        /* Estilos para os selects dentro do menu */
+        .menu-container select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+        
   .content-box {
     background-color: #f5f5f5;
     padding: 20px;
