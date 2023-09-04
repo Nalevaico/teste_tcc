@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="pessoa_juridica.css">
+  <title>Cadastro Pessoa Juridica</title>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="logo" style="display: flex;align-items: center;">
+        <img src="logo_distribuidora.png">
+        <H1>SERPERTS'SIP</H1>
+    </div>
+  </nav>
+  <div class="content-box">
+CADASTRO
+</div>
+<form class="registration-form">
+    <label for="companyName">Razão Social:</label>
+    <input type="text" id="companyName" name="companyName" required> <br><BR>
+
+    <label for="companyEmail">Nome Fantasia:</label>
+    <input type="text" id="companyEmail" name="companyEmail" required><br><BR>
+        <div class="flex-container">
+            <div class="flex-item">
+              <label for="CNPJ">CNPJ:</label>
+              <input type="text" id="CNPJ" name="CNPJ" maxlength="18" placeholder="Ex: 00.000.000/0000-00" oninput="formatCNPJ(this)">
+            </div>
+            <div class="flex-item">
+              <label for="Estadual">Insc. Estadual:</label>
+              <input type="text" id="Estadual" name="Estadual">
+            </div>
+          </div>
+
+    <label for="Segmento" >Segmento:</label>
+    <select id="Segmento" name="Segmento">
+    </select><br><BR>
+
+    <button type="submit"> <a href="endereço.html"> Continua</a></button>
+  </form>
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2023 SERPERTS'SIP - Todos os direitos reservados.</p>
+      <p>Endereço: Rua da Distribuição, 123 - Cidade</p>
+      <p>Telefone: (123) 456-7890 | Email: contato@distribuidora.com</p>
+    </div>
+  </footer>
+<script>
+   function formatCNPJ(input) {
+      // Remove qualquer caracter que não seja número
+      var value = input.value.replace(/\D/g, '');
+
+      // Adiciona os símbolos do CNPJ
+      if (value.length > 2) {
+        value = value.slice(0, 2) + '.' + value.slice(2);
+      }
+      if (value.length > 6) {
+        value = value.slice(0, 6) + '.' + value.slice(6);
+      }
+      if (value.length > 10) {
+        value = value.slice(0, 10) + '/' + value.slice(10);
+      }
+      if (value.length > 15) {
+        value = value.slice(0, 15) + '-' + value.slice(15, 18);
+      }
+
+      // Atualiza o valor do campo
+      input.value = value;
+    }
+</script>
+</body>
+</html>

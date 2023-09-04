@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="login3.css"> 
+    <title>PRINCIPAL 2</title>
+</head>
+<body>
+    <nav>
+        <div class="logo" style="display: flex;align-items: center;">
+            <img src="logo_distribuidora.png">
+        </div>
+        <ul class="nav-links">
+            <li><a href="principal2.html">Home</a></li>
+            <li><a href="https://www.web-leb.com/code">Solutions</a></li>
+            <li><a href="https://www.web-leb.com/code">Products</a></li>
+            <li><a href="https://www.web-leb.com/code">Services</a></li>
+            <li><a href="https://www.web-leb.com/code">Contact Us</a></li>
+            <li><a href="login.html"><button class="login-button">Login</button></a></li>
+            <li><a href="login.html"><button class="cadastrar-button">Cadastrar</button></a></li>
+        </ul>
+    </nav>
+
+    <div class="message-box">
+        <p>Esta é outra mensagem abaixo da barra de navegação.</p>
+    </div>
+
+    <script>
+        const navLinks = document.querySelector(".nav-links");
+        const links = document.querySelectorAll(".nav-links li");
+        const hamburger = document.querySelector(".hamburger"); // Adicionei esta linha
+
+        hamburger.addEventListener('click', () => {
+            //Animate Links
+            navLinks.classList.toggle("open");
+            links.forEach(link => {
+                link.classList.toggle("fade");
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="endereço.css">
+  <title>endereço</title>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="logo" style="display: flex;align-items: center;">
+      <img src="logo_distribuidora.png">
+      <H1>SERPERTS'SIP</H1>
+    </div>
+  </nav>
+  <div class="content-box">
+    CADASTRO
+  </div>
+  <form class="registration-form">
+    <label for="CEP">CEP:</label>
+    <input type="text" id="CEP" name="CEP" required maxlength="9" placeholder="Ex: 12345-678" oninput="formatCEP(this)"><br><br>
+
+    <label for="logradouro">Logradouro:</label>
+    <input type="text" id="logradouro" name="logradouro" required><br><br>
+
+    <div class="flex-container">
+      <div class="flex-item">
+        <label for="numero">Número:</label>
+        <input type="number" id="numero" name="numero">
+      </div>
+      <div class="flex-item">
+        <label for="complemento">Complemento:</label>
+        <input type="text" id="complemento" name="complemento">
+      </div>
+    </div><br><br>
+
+    <div class="flex-container">
+        <div class="bairro-cidade">
+          <label for="bairro">Bairro:</label>
+          <input type="text" id="bairro" name="bairro" required>
+        </div>
+        <div class="bairro-cidade">
+          <label for="cidade">Cidade:</label>
+          <input type="text" id="cidade" name="cidade" required>
+        </div>
+        <div class="flex-item">
+            <label for="Estado" >Estado:</label>
+            <select id="Estado" name="Estado">
+            </select>
+        </div>
+      </div>
+
+
+    <button type="submit"> <a href="contato_juridica.html"> Continua</a></button>
+  </form>
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2023 SERPERTS'SIP - Todos os direitos reservados.</p>
+      <p>Endereço: Rua da Distribuição, 123 - Cidade</p>
+      <p>Telefone: (123) 456-7890 | Email: contato@distribuidora.com</p>
+    </div>
+  </footer>
+  <script>
+    function formatCEP(input) {
+      // Remove qualquer caracter que não seja número
+      var value = input.value.replace(/\D/g, '');
+      
+      // Adiciona os símbolos de CEP
+      if (value.length > 5) {
+        value = value.slice(0, 5) + '-' + value.slice(5, 8);
+      }
+      
+      // Atualiza o valor do campo
+      input.value = value;
+    }
+
+  </script>
+</body>
+</html>

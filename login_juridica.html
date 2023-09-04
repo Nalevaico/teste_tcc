@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="login_juridica.css">
+  <title> Login Pessoa Fisica</title>
+</head>
+<body>
+  <nav class="navbar">
+        <H1>SERPERTS'SIP</H1>
+        <a class="button_card" href="login.html" > Comprar Como Pessoa Fisica </button> 
+  </nav>
+  <div class="content-box">
+    <a class="button_card" href="login_juridica.html">ENTRAR</a>
+    <a class="button_card" href="cad_pessoa_juridica.html">CADASTRE-SE</a>
+    <a class="button_card" href="#">BENEFÍCIOS</a>
+    <a class="button_card" href="#">SOBRE NÓS</a>
+    <a class="button_card" href="#">CONTATO</a>
+  </div>
+
+  <form class="registration-form" action="processar_login.php" method="post">
+
+
+    <label for="email_cpf">Email:</label>
+    <input type="text" id="email_cpf" name="email_cpf" required><br><br>
+
+    <label for="senha">Senha:</label>
+    <input type="password" id="senha" name="senha" required><br><br>
+
+    <button type="submit">Entrar</button>
+   
+    <p class="link-center"><a href="esqueceu_senha.html">Esqueceu sua senha?</a></p>
+  </form>
+ <div class="card-container">
+    <div class="card1">
+     <div class="message">Primeira compra?</div>
+      <a class="button_card" href="cad_pessoa_fisica.html">Cadastre-se agora</a>
+    </div>
+    </div>
+
+   
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2023 SERPERTS'SIP - Todos os direitos reservados.</p>
+      <p>Endereço: Rua da Distribuição, 123 - Cidade</p>
+    </div>
+    <div class="logo">
+      <img src="logo_distribuidora.png">
+      </div>
+  </footer>
+</body>
+</html>

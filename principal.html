@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Distribuidora de Bebidas</title>
+  <style>
+  /* Estilos globais */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2 {
+  margin-top: 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Estilos para o modo claro */
+body.light-mode {
+  background-color: #f5f5f5;
+  color: #333;
+}
+
+/* Estilos para o modo escuro */
+body.dark-mode {
+  background-color: #333;
+  color: #f5f5f5;
+}
+
+header {
+  background-color: #eee;
+  padding: 10px;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #333;
+  padding: 5px;
+}
+
+main {
+  padding: 20px;
+}
+
+.toggle-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.toggle-switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.toggle-switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.toggle-slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: .4s;
+  border-radius: 34px;
+}
+
+.toggle-slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  transition: .4s;
+  border-radius: 50%;
+}
+
+input:checked + .toggle-slider {
+  background-color: #2196F3;
+}
+
+input:checked + .toggle-slider:before {
+  transform: translateX(26px);
+}
+
+section {
+  margin-bottom: 30px;
+}
+
+.carousel {
+  display: flex;
+  overflow-x: scroll;
+  scroll-snap-type: x mandatory;
+}
+
+.carousel-item {
+  flex: 0 0 auto;
+  scroll-snap-align: start;
+  margin-right: 10px;
+  width: 200px;
+  height: 200px;
+  background-color: #ccc;
+}
+
+.login-register {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.btn-login,
+.btn-register {
+  padding: 10px 20px;
+  margin: 0 10px;
+  background-color: #2196F3;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+footer {
+  background-color: #eee;
+  padding: 10px;
+  text-align: center;
+}
+
+/* Media queries */
+@media (max-width: 768px) {
+  .container {
+    padding: 10px;
+  }
+
+  nav ul li {
+    display: block;
+    margin-bottom: 10px;
+  }
+}
+
+  </style>
+</head>
+
+<body class="light-mode">
+  <header>
+    <nav>
+      <!-- Menu de navegação -->
+    </nav>
+  </header>
+
+  <main>
+    <h1>Bem-vindo à Distribuidora de Bebidas</h1>
+
+    <div class="toggle-container">
+      <label class="toggle-switch">
+        <input type="checkbox" id="toggle-mode">
+        <span class="toggle-slider"></span>
+      </label>
+    </div>
+
+    <section>
+      <h2>Produtos em destaque</h2>
+
+      <div class="carousel">
+        <!-- Itens do carrossel -->
+      </div>
+    </section>
+
+    <section>
+      <h2>Área de Login ou Registro</h2>
+
+      <div class="login-register">
+        <button class="btn-login">Fazer login</button>
+        <button class="btn-register">Registrar</button>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Todos os direitos reservados &copy; 2023 Distribuidora de Bebidas</p>
+  </footer>
+
+  <script>
+    const toggleMode = document.getElementById('toggle-mode');
+    toggleMode.addEventListener('change', () => {
+      document.body.classList.toggle('dark-mode');
+    });
+  </script>
+</body>
+
+</html>

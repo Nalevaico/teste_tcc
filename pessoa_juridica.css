@@ -1,0 +1,105 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+}
+
+
+
+.logo img {
+  height: 6rem;
+  width: 6rem;
+  padding: 1vh 1vw;
+  text-align: center;
+}
+
+.navbar {
+  background-color: black;
+  color: rgb(129, 1, 1);
+  padding: 10px;
+}
+
+
+
+.content-box {
+  background-color: #f5f5f5;
+  padding: 20px;
+  margin-top: 5px;
+  box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.1);
+}
+
+.registration-form {
+  background-color: rgb(165, 165, 165);
+  width: 40%;
+  border-radius: 5px;
+  padding: 55px;
+  margin: 5rem auto;
+}
+
+label {
+  display: block;
+  margin-top: 10px;
+}
+
+input[type="text"],
+input[type="number"] {
+  width: 100%;
+  padding: 7px;
+  border: 1px solid black;
+  border-radius: 4px;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.flex-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+select {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  border: 1px solid black;
+  border-radius: 4px;
+}
+
+select:focus {
+  border-color: #555;
+}
+
+button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background-color: #333;
+  color: #9b0f0f;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #555;
+}
+
+.container {
+  left: 2rem;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.footer {
+  background-color: #333;
+  color: #fff;
+  padding: 2rem;
+  text-align: center;
+  margin-top: 2rem;
+}

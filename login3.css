@@ -1,0 +1,95 @@
+/* Reset de estilos para evitar inconsistências */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos gerais */
+body {
+    font-family: sans-serif;
+}
+
+/* Estilos para a barra de navegação */
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #131418;
+    box-shadow: 0 3px 20px rgba(0, 0, 0, 0.2);
+    height: 7.5rem;
+    width: 100vw;
+    position: fixed;
+    z-index: 10;
+}
+
+.logo img {
+    height: 8rem;
+    width: 8rem;
+    padding: 1vh 1vw;
+    text-align: center;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    width: 88vw;
+    padding: 0 0.7vw;
+    justify-content: space-evenly;
+    align-items: center;
+    text-transform: uppercase;
+}
+
+.nav-links li {
+    position: relative;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #f2f5f7;
+    padding: 0.6rem 0.8rem;
+}
+
+/* Estilos para os botões */
+.login-button,
+.cadastrar-button {
+    background-color: transparent;
+    border: 1.5px solid #f2f5f7;
+    border-radius: 2em;
+    padding: 0.6rem 0.8rem;
+    font-size: 1rem;
+    cursor: pointer;
+    color: #f2f5f7;
+    text-decoration: none;
+}
+
+.login-button:hover,
+.cadastrar-button:hover {
+    background-color: #f2f5f7;
+    color: #131418;
+    border: 1.5px solid #f2f5f7;
+    transition: all ease-in-out 350ms;
+}
+
+/* Estilos para a caixa de mensagem */
+.message-box {
+    background-color: #f0f0f0;
+    padding: 20px;
+    margin-top: 100px; /* Espaçamento para afastar da barra de navegação */
+    text-align: center;
+    border-top: 1px solid #ccc;
+}
+
+/* Estilos para o ícone do menu hamburguer (adicionei essa classe no HTML) */
+.hamburger div {
+    width: 30px;
+    height: 3px;
+    background: #f2f5f7;
+    margin: 5px;
+    transition: all 0.3s ease;
+}
+
+/* Estilos para telas pequenas */
+@media screen and (max-width: 800px) {
+    /* ... Estilos para telas pequenas ... */
+}

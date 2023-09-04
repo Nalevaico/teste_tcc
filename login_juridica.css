@@ -1,0 +1,154 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: sans-serif;
+  }
+  
+  .navbar {
+    background-color: black;
+    padding: 30px;
+   
+  }
+  
+  .navbar h1{
+      color:pink;
+      margin-top: 2rem;
+  }
+  .navbar .button_card{
+      text-align: center;
+      background-color: red;
+      color: #fff;
+      font-size: 10px;
+      width: 20REM;
+      cursor: pointer;
+      margin-left: 60rem; 
+      margin-top: -1rem;
+    }
+  
+  .content-box {
+    background-color: #f5f5f5;
+    padding: 20px;
+    margin-top: 5px;
+    box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.1);
+    
+  }
+  
+  .content-box a {
+    text-decoration: none;
+    margin: 0 10px; 
+    color: #333;
+    background-color:  #f5f5f5;
+  }
+  
+  
+  .registration-form {
+    background-color: rgb(165, 165, 165);
+    width: 40%;
+    border-radius: 5px;
+    padding: 55px;
+    margin: 5rem auto;
+    margin-right: 30px;
+  
+  }
+  
+  
+  label {
+    display: block;
+    margin-top: 10px;
+  }
+  
+  input[type="text"],
+  input[type="password"]
+   {
+    width: 100%;
+    padding: 7px;
+    border: 1px solid black;
+    border-radius: 4px;
+    box-sizing: border-box;
+    overflow: hidden;
+  }
+  
+  
+  
+  .card-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .card1 {
+     border: 1px solid #ccc;
+      border-radius: 5px;
+     padding: 40px;
+     width: 500px;
+    text-align: center;
+    margin-right: 43rem;
+    margin-top:-20rem;
+    }
+  
+    .message {
+     font-size: 18px;
+    }
+  
+          .button_card {
+              background-color: #7f858b;
+              color: #fff;
+              padding: 10px 20px;
+              border: none;
+              border-radius: 5px;
+              margin-top: 10px;
+              text-decoration: none;
+              display: inline-block;
+          }
+  
+  
+  button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #333;
+    color: #9b0f0f;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #555;
+  }
+  
+  .link-center {
+      text-align: center; /* Alinha horizontalmente o conteúdo do link */
+      display: block; /* Define o link como um bloco para alinhar verticalmente */
+      margin-top: 10px; /* Espaçamento superior para alinhar verticalmente */
+  }
+  
+  
+  
+  .container {
+    left: 2rem;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+  }
+  
+  .footer {
+    background-color: #333;
+    color: #fff;
+    padding: 2rem;
+    
+  }
+  
+  .logo img {
+    height: 10rem;
+    width: 10rem;
+    padding: -5vh -5vw;
+    margin-left: 50rem;
+    margin-top: -18rem;
+  }
+  
+  

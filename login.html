@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="login.css">
+  <title> Login Pessoa Fisica</title>
+</head>
+<body>
+  <nav class="navbar">
+        <H1>SERPERTS'SIP</H1>
+  </nav>
+  <div class="content-box">ENTRAR </div>
+  
+
+  <form class="registration-form" action="processar_login.php" method="post">
+
+    <div class="login-container">
+        <i class="login-icon">👤</i>
+        <p class="login-message">Já sou Cliente</p>
+      </div><br><br>
+
+    <label for="email_cpf">Email ou CPF:</label>
+    <input type="text" id="email_cpf" name="email_cpf" required><br><br>
+
+    <label for="senha">Senha:</label>
+    <input type="password" id="senha" name="senha" required><br><br>
+
+    <button type="submit">Entrar</button>
+   
+    <p class="link-center"><a href="esqueceu_senha.html">Esqueceu sua senha?</a></p>
+  </form>
+ <div class="card-container">
+    <div class="card">
+     <div class="message">Primeira compra</div>
+      <a class="button_card" href="cad_pessoa_fisica.html">Cadastre-se agora</a>
+    </div>
+    </div>
+
+ <div class="card-container">
+    <div class="card2">
+     <div class="message">Pessoa Juridica</div>
+      <a class="button_card" href="cad_pessoa_juridica.html">Acesse nossa Loja Aqui</a>
+    </div>
+    </div>
+   
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2023 SERPERTS'SIP - Todos os direitos reservados.</p>
+      <p>Endereço: Rua da Distribuição, 123 - Cidade</p>
+      <p>Telefone: (123) 456-7890 | Email: contato@distribuidora.com</p>
+    </div>
+    <div class="logo">
+      <img src="logo_distribuidora.png">
+      </div>
+  </footer>
+</body>
+</html>
