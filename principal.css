@@ -25,7 +25,7 @@
         }
 
         /* Estilos para os selects dentro do menu */
-        .menu-container select {
+        .content-box .menu-container select {
             width: 100%;
             padding: 10px;
             margin-bottom: 10px;
