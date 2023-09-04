@@ -27,14 +27,14 @@ body {
 
 .navbar input[type="text"] {
   padding: 5px;
-  border: 1px solid #ccc;
+  border: 1px solid #cf1212;
   border-radius: 4px;
 }
 
 .navbar button[type="submit"] {
   padding: 5px 10px;
   background-color: #007bff; /* Cor de fundo do botão (azul) */
-  color: #fff; /* Cor do texto do botão (branco) */
+  color: #13d162; /* Cor do texto do botão (branco) */
   border: none;
   border-radius: 4px;
   margin-left: 5px; /* Espaço entre a entrada de texto e o botão */
