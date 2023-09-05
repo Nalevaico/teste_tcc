@@ -14,32 +14,35 @@ body {
  
 }
 
-.navbar h1{
-    color:pink;
-    margin-top: 2rem;
-}
-
 .navbar .search-bar {
-  display: flex;
-  align-items: center;
-  margin-left: 20px; /* Ajuste a margem à sua preferência */
+    display: flex;
+    align-items: center;
+    margin-left: 15rem; 
+    margin-top: -2rem;
+    
 }
-
-.navbar input[type="text"] {
-  padding: 5px;
-  border: 1px solid #cf1212;
-  border-radius: 4px;
-}
-
-.navbar button[type="submit"] {
-  padding: 5px 10px;
-  background-color: #007bff; /* Cor de fundo do botão (azul) */
-  color: #13d162; /* Cor do texto do botão (branco) */
-  border: none;
-  border-radius: 4px;
-  margin-left: 5px; /* Espaço entre a entrada de texto e o botão */
-}
-
+.navbar .search-bar input[type="text"] {
+    padding: 10px;
+    width: 300px; 
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding-left: 30px; 
+    background-color: black;
+    color: white;
+  }
+  
+  .navbar .search-bar i {
+    position: absolute;
+    left: 17.4rem; 
+    color: #fa1d1d;
+   
+   
+  }
+  .navbar h1 {
+    margin: 0; 
+    font-size: 24px;
+    color: #bd0303; 
+  } 
 
 .content-box {
   background-color: #f5f5f5;
