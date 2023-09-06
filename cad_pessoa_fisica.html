@@ -16,14 +16,14 @@
   <div class="content-box">CADASTRO </div>
 
 
-<form class="registration-form">
-    <label for="nome">Nome Completo:</label>
-    <input type="text" id="nome" name="nome" required> <br><BR>
+<form class="registration-form"  action="cad_pessoa_fisica.php" method="post">
+    <label for="nome_completo">Nome Completo:</label>
+    <input type="text" id="nome_completo" name="nome_completo" required> <br><BR>
 
     <div class="flex-container1">
     <div class="flex-item1">
-    <label for="CPF">CPF</label>
-    <input type="text" id="CPF" name="CPF" required><br><BR>
+    <label for="CPF_pessoa_fisica">CPF</label>
+    <input type="text" id="CPF_pessoa_fisica" name="CPF_pessoa_fisica" oninput="formatarCPF(this)" maxlength="14" required><br><BR>
     </div>
      <div class="flex-item1">
      <label for="data_nascimento">Data de Nascimento:</label>
@@ -33,24 +33,24 @@
 
     <div class="flex-container2">
       <div class="flex-item2">
-      <label for="Celular">Celular:</label>
-      <input type="text" id="Celular" name="Celular" required><br><BR>
+        <label for="celular">Celular:</label>
+        <input type="text" id="celular" name="celular" maxlength="15"><br><BR>
       </div>
        <div class="flex-item2">
-        <label for="gender">Sexo:</label>
-    <select id="gender" name="gender">
+        <label for="sexo">Sexo:</label>
+    <select id="sexo" name="sexo">
       <option value="masculino">Selecione</option>
       <option value="feminino">Feminino</option>
       <option value="outro">Outro</option>
     </select><br><br>
         </div>
       </div>
-      <label for="companyEmail">Email:</label>
-  <input type="email" id="companyEmail" name="companyEmail" required><br><br>
+      <label for="email_pessoa_fisica">Email:</label>
+  <input type="email" id="email_pessoa_fisica" name="email_pessoa_fisica" required><br><br>
   <label for="confirmaçao">confirmaçao:</label>
-  <input type="email" id="confirmaçao" name="confirmaçao">
+  <input type="email" id="confirmacao_email" name="confirmacao_email">
      <br><br>     
-     <a class="button_card" href="endereco2.html" > Continuar </a></button> 
+     <input type="submit" value="Cadastrar">
   </form>
   <footer class="footer">
     <div class="container">
@@ -59,5 +59,25 @@
       <p>Telefone: (123) 456-7890 | Email: contato@distribuidora.com</p>
     </div>
   </footer>
+  <script>
+    
+    function formatarNumero(input) {
+        let celular = input.value;
+        celular = celular.replace(/\D/g, "");
+        celular = celular.replace(/^(\d{2})(\d)/g, "($1) $2");
+        celular = celular.replace(/(\d)(\d{4})$/, "$1-$2");
+        input.value = celular;
+    }
+
+    document.getElementById("celular").addEventListener("input", function() {
+        formatarNumero(this);
+    });
+
+    function formatarCPF(campo) {
+            campo.value = campo.value.replace(/\D/g, ''); // Remove tudo que não for número
+            campo.value = campo.value.replace(/(\d{3})(\d{3})(\d{3})(\d{2})/, '$1.$2.$3-$4'); // Formata o CPF
+        }
+</script>
+
 </body>
 </html>

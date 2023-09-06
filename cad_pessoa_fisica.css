@@ -88,22 +88,20 @@ select:focus {
   border-color: #555;
 }
 
-.button_card {
-  display: block;
-  width: 100%;
-  padding: 10px;
-  background-color: #ff3838;
-  color: #aafa14;
+input[type="submit"] {
+  background-color: rgb(0, 0, 0);
+  color: rgb(253, 245, 245);
+  padding: 10px 20px;
   border: none;
-  border-radius: 3px;
+  border-radius: 5px;
   cursor: pointer;
-  text-align: center;
+  display: block;
+  margin: 0 auto; 
 }
 
-.button_card:hover {
-  background-color: #ff3838;
+input[type="submit"]:hover {
+  background-color: rgb(36, 30, 30);
 }
-
 .container {
   left: 2rem;
   max-width: 800px;
