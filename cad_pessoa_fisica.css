@@ -92,8 +92,8 @@ select:focus {
   display: block;
   width: 100%;
   padding: 10px;
-  background-color: #333;
-  color: #9b0f0f;
+  background-color: #ff3838;
+  color: #aafa14;
   border: none;
   border-radius: 3px;
   cursor: pointer;
@@ -101,7 +101,7 @@ select:focus {
 }
 
 .button_card:hover {
-  background-color: #555;
+  background-color: #ff3838;
 }
 
 .container {
