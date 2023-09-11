@@ -1,3 +1,4 @@
+
 <?php
 $nome_completo = $_POST['nome_completo'];
 $CPF_pessoa_fisica = $_POST['CPF_pessoa_fisica'];
@@ -11,7 +12,7 @@ if ($email_pessoa_fisica != $confirmacao_email) {
     echo "O campo de confirmação de e-mail não corresponde ao e-mail. Por favor, verifique.";
 }
 
-$conexao = mysqli_connect('localhost', 'root', '', 'teste2');
+$conexao = mysqli_connect('http://ec2-3-231-215-130.compute-1.amazonaws.com','av_jaquelinenalevaico','jaquelinenalevaico','bd_av4i_jaquelinenalevaico');
 $sql = "insert into cad_pessoa_fisica(nome_completo, CPF_pessoa_fisica, data_nascimento, celular, sexo, email_pessoa_fisica, confirmacao_email)
  values ('$nome_completo', '$CPF_pessoa_fisica', '$data_nascimento','$celular', '$sexo', '$email_pessoa_fisica', '$confirmacao_email')";
 $inserir = mysqli_query($conexao,$sql);
@@ -25,4 +26,4 @@ echo "erro";
 }
 mysqli_close ($conexao);
 ?>
-?>
+
