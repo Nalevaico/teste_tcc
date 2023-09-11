@@ -1,33 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="cad_pessoa_fisica.css">
   <title>Cadastro Pessoa Fisica</title>
 </head>
+
 <body>
   <nav class="navbar">
     <div class="logo" style="display: flex;align-items: center;">
-        <img src="logo_distribuidora.png">
-        <H1>SERPERTS'SIP</H1>
+      <img src="logo_distribuidora.png">
+      <H1>SERPERTS'SIP</H1>
     </div>
   </nav>
   <div class="content-box">CADASTRO </div>
 
 
-<form class="registration-form">
+  <form class="registration-form" action="cad_pessoa_fisica.php" method="post">
     <label for="nome_completo">Nome Completo:</label>
     <input type="text" id="nome_completo" name="nome_completo" required> <br><BR>
 
     <div class="flex-container1">
-    <div class="flex-item1">
-    <label for="CPF_pessoa_fisica">CPF</label>
-    <input type="text" id="CPF_pessoa_fisica" name="CPF_pessoa_fisica" oninput="formatarCPF(this)" maxlength="14" required><br><BR>
-    </div>
-     <div class="flex-item1">
-     <label for="data_nascimento">Data de Nascimento:</label>
-     <input type="date" id="data_nascimento" name="data_nascimento">
+      <div class="flex-item1">
+        <label for="CPF_pessoa_fisica">CPF</label>
+        <input type="text" id="CPF_pessoa_fisica" name="CPF_pessoa_fisica" oninput="formatarCPF(this)" maxlength="14"
+          required><br><BR>
+      </div>
+      <div class="flex-item1">
+        <label for="data_nascimento">Data de Nascimento:</label>
+        <input type="date" id="data_nascimento" name="data_nascimento">
       </div>
     </div>
 
@@ -36,22 +39,21 @@
         <label for="celular">Celular:</label>
         <input type="text" id="celular" name="celular" maxlength="15"><br><BR>
       </div>
-       <div class="flex-item2">
+      <div class="flex-item2">
         <label for="sexo">Sexo:</label>
-    <select id="sexo" name="sexo">
-      <option value="masculino">Selecione</option>
-      <option value="feminino">Feminino</option>
-      <option value="outro">Outro</option>
-    </select><br><br>
-        </div>
+        <select id="sexo" name="sexo">
+          <option value="masculino">Selecione</option>
+          <option value="feminino">Feminino</option>
+          <option value="outro">Outro</option>
+        </select><br><br>
       </div>
-      <label for="email_pessoa_fisica">Email:</label>
-  <input type="email" id="email_pessoa_fisica" name="email_pessoa_fisica" required><br><br>
-  <label for="confirmaçao">confirmaçao:</label>
-  <input type="email" id="confirmacao_email" name="confirmacao_email">
-     <br><br>     
-      
-     <input type="submit" value="Cadastrar">
+    </div>
+    <label for="email_pessoa_fisica">Email:</label>
+    <input type="email" id="email_pessoa_fisica" name="email_pessoa_fisica" required><br><br>
+    <label for="confirmaçao">confirmaçao:</label>
+    <input type="email" id="confirmacao_email" name="confirmacao_email">
+    <br><br>
+    <input type="submit" value="Cadastrar">
   </form>
   <footer class="footer">
     <div class="container">
@@ -61,24 +63,25 @@
     </div>
   </footer>
   <script>
-    
+
     function formatarNumero(input) {
-        let celular = input.value;
-        celular = celular.replace(/\D/g, "");
-        celular = celular.replace(/^(\d{2})(\d)/g, "($1) $2");
-        celular = celular.replace(/(\d)(\d{4})$/, "$1-$2");
-        input.value = celular;
+      let celular = input.value;
+      celular = celular.replace(/\D/g, "");
+      celular = celular.replace(/^(\d{2})(\d)/g, "($1) $2");
+      celular = celular.replace(/(\d)(\d{4})$/, "$1-$2");
+      input.value = celular;
     }
 
-    document.getElementById("celular").addEventListener("input", function() {
-        formatarNumero(this);
+    document.getElementById("celular").addEventListener("input", function () {
+      formatarNumero(this);
     });
 
     function formatarCPF(campo) {
-            campo.value = campo.value.replace(/\D/g, ''); // Remove tudo que não for número
-            campo.value = campo.value.replace(/(\d{3})(\d{3})(\d{3})(\d{2})/, '$1.$2.$3-$4'); // Formata o CPF
-        }
-</script>
+      campo.value = campo.value.replace(/\D/g, ''); // Remove tudo que não for número
+      campo.value = campo.value.replace(/(\d{3})(\d{3})(\d{3})(\d{2})/, '$1.$2.$3-$4'); // Formata o CPF
+    }
+  </script>
 
 </body>
+
 </html>
