@@ -13,7 +13,8 @@ if ($email_pessoa_fisica != $confirmacao_email) {
 }
 
 $mysqli_connection= new MySQLi('http://ec2-3-231-215-130.compute-1.amazonaws.com','av_jaquelinenalevaico','jaquelinenalevaico','bd_av4i_jaquelinenalevaico');
-if($mysqli_connection->connect_error){
+if($mysqli_connection->connect_error);
+$inserir = mysqli_query($conexao,$sql);{
     echo "Desconectado! Erro:" . $mysqli_connection->connect_error;
 } else{
     echo"Conectado!";
