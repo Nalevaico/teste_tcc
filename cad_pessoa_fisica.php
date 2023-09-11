@@ -14,7 +14,9 @@ if ($email_pessoa_fisica != $confirmacao_email) {
 
 $mysqli_connection= new MySQLi('http://ec2-3-231-215-130.compute-1.amazonaws.com','av_jaquelinenalevaico','jaquelinenalevaico','bd_av4i_jaquelinenalevaico');
 if($mysqli_connection->connect_error);
-$inserir = mysqli_query($conexao,$sql);{
+$sql = "insert into cad_pessoa_fisica(nome_completo, CPF_pessoa_fisica, data_nascimento, celular, sexo, email_pessoa_fisica, confirmacao_email)
+ values ('$nome_completo', '$CPF_pessoa_fisica', '$data_nascimento','$celular', '$sexo', '$email_pessoa_fisica', '$confirmacao_email')";
+$inserir = mysqli_query($conexao,$sql);
     echo "Desconectado! Erro:" . $mysqli_connection->connect_error;
 } else{
     echo"Conectado!";
